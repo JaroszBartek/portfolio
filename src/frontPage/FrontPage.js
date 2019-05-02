@@ -2,7 +2,6 @@ import React from 'react';
 import { BrowserRouter as Router } from 'react-router-dom';
 import { createGlobalStyle, ThemeProvider } from 'styled-components';
 import { theme } from '../theme/theme'
-import Nav from '../components/Nav';
 import Header from '../components/Header';
 import Main from '../components/Main';
 import Footer from '../components/Footer';
@@ -14,6 +13,10 @@ html {
 }
 *, *::before, *::after {
   box-sizing: border-box;
+}
+*:focus {
+  outline: 3px outset #ef6864ab;
+  outline-offset: 2px;
 }
 body {
   padding: 0;
@@ -32,12 +35,11 @@ const FrontPage = () => {
     <ThemeProvider theme={theme} >
       <Router>
         <GlobalStyle />
-        <div className="Wrapper">
-          <Nav />
+        <>
           <Header />
           <Main />
           <Footer />
-        </div>
+        </>
       </Router>
     </ThemeProvider>
   );
