@@ -4,7 +4,7 @@ import styled from 'styled-components';
 
 const Video = () => {
     return (
-        <section>
+        <>
             <div>
                 <h2>Video</h2>
                 <p>
@@ -19,7 +19,7 @@ const Video = () => {
                     <source src="video/splash.mp4" type="video/mp4" />
                 </video>
             </div>
-        </section>
+        </>
     );
 }
 

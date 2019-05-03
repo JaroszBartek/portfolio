@@ -4,7 +4,7 @@ import styled from 'styled-components';
 
 const Design = () => {
     return (
-        <section>
+        <>
             <div>
                 <h2>Projektowanie</h2>
                 <p>
@@ -129,7 +129,7 @@ const Design = () => {
                     </g>
                 </svg>
             </div>
-        </section>
+        </>
     );
 }
 

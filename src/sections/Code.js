@@ -4,7 +4,7 @@ import styled from 'styled-components';
 
 const Code = () => {
     return (
-        <section>
+        <>
             <div>
                 <h2>Kod</h2>
                 <p>
@@ -17,7 +17,7 @@ const Code = () => {
             <div>
 
             </div>
-        </section>
+        </>
     );
 }
 

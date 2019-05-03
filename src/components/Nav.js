@@ -12,16 +12,6 @@ const navItems = [
     { id: 6, name: "Kontakt", path: "/#contact" },
 ]
 
-const StyledWrapper = styled.div`
-    position: fixed;
-    display: flex;
-    padding: 20px;
-    justify-content: flex-end;
-    width: 100%;
-    box-sizing: border-box;
-    z-index: 500;
-    `;
-
 const Navigation = styled.nav`
     position: absolute;
     top: 0;
@@ -83,10 +73,8 @@ const ListItem = styled.li`
         }
         :hover::before {
             width: 50%;
-      } 
-      
+      }   
 `;
-
 
 const StyledLink = styled(NavLink)`
     font-size: 2rem;
@@ -110,7 +98,7 @@ class Nav extends Component {
 
     render() {
         return (
-            <StyledWrapper>
+            <>
                 <Hamburger hamburgerHandler={this.hamburgerHandler} />
                 <Navigation navOpen={this.state.navOpen}>
                     <ul >
@@ -123,7 +111,7 @@ class Nav extends Component {
                         ))}
                     </ul>
                 </Navigation>
-            </StyledWrapper >
+            </>
         );
     }
 

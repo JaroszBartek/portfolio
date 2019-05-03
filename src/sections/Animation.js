@@ -4,7 +4,7 @@ import styled from 'styled-components';
 
 const Animation = () => {
     return (
-        <section>
+        <>
             <div>
                 <h2>Animacje</h2>
                 <p>
@@ -18,7 +18,7 @@ const Animation = () => {
             <div>
 
             </div>
-        </section>
+        </>
     );
 }
 

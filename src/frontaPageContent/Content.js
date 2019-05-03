@@ -1,3 +1,5 @@
+import React from 'react';
+import LogoAnimation from '../components/LogoAnimation';
 
 export const Content = [
     {
@@ -5,6 +7,7 @@ export const Content = [
         id: "home",
         title: "Digital Expression",
         text: "Jestem Front-End Developerem starającym się tworzyć wyjątkowe strony charakteryzujące się ekspresją oraz zapadające w pamięć. W swojej pracy zawszę patrzę na projekty oczami dziecka, aby oprócz estetyki dodać do nich odrobinę magii. Bardzo pomaga w tym wcześniejsze doświadczenie wyniesione z produkcji filmów i animacji.",
+        animation: <LogoAnimation />,
     },
     {
         key: 2,
@@ -43,3 +46,24 @@ export const Content = [
         text: "Zostań w kontakcie! +48 732 945 553 jarosz.bartlomiej89@gmail.com",
     },
 ]
+
+
+    < Banner />
+    <article>
+        <Design />
+        < Code />
+    </article>
+    <Animation />
+    < Video />
+    <Cv />
+    <Contact />
+    
+    { sectionList.slice(0, 1) }
+<article>
+    {sectionList.slice(1, 3)}
+</article>
+{ sectionList.slice(3) }
+
+const sectionList = Content.map(section => (
+    <Section key={Content.key} {...section} />
+));

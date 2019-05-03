@@ -4,7 +4,7 @@ import styled from 'styled-components';
 
 const Contact = () => {
     return (
-        <section>
+        <>
             <div>
                 <h2>Kontakt</h2>
                 <address class="section__content">
@@ -44,7 +44,7 @@ const Contact = () => {
                     </form>
                 </div>
             </div>
-        </section >
+        </>
     );
 }
 
