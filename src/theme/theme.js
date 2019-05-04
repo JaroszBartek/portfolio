@@ -9,8 +9,6 @@ export const theme = {
     },
     fonts: {
         main: '1.8rem',
-        h1: '4.5rem',
-        h2: '3.5rem',
     },
     media: {
         tablet: '@media (min-width: 600px)',

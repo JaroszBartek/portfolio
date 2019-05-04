@@ -6,20 +6,22 @@ import styled from 'styled-components';
 const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
+  justify-content: flex-end;
   max-width: 600px;
+  padding: 2rem;
   `
 const Title = styled.h1`
   margin-top: 0;
   margin-bottom: 20px;
   font-size: 2.5rem;
-  color: #ffffff;
+  color: ${({ theme }) => theme.colors.primary};
   letter-spacing: 4px;
   ${({ theme }) => theme.media.tablet} {
     font-size: 4.5rem;
   }
   `
 const Text = styled.p`
-  color: #ffffff;
+  color: ${({ theme }) => theme.colors.primary};
   font-size: 1.6rem;
   line-height: 1.5;
   ${({ theme }) => theme.media.tablet} {

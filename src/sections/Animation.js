@@ -1,11 +1,15 @@
 import React from 'react';
 import styled from 'styled-components';
+import Butterfly from '../components/Butterfly';
+
+
 
 
 const Animation = () => {
     return (
         <>
             <div>
+                <Butterfly />
                 <h2>Animacje</h2>
                 <p>
                     Animacje przyciągają uwagę i pozwalają poprawić czytelność strony.
@@ -14,9 +18,6 @@ const Animation = () => {
                     chodź potrafię wykonać bardziej złożone rzeczy w plikach wideo przy pomocy
                     Adobe After Effects.
                 </p>
-            </div>
-            <div>
-
             </div>
         </>
     );

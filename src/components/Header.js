@@ -5,7 +5,7 @@ import Nav from '../components/Nav';
 const StyledHeader = styled.header`
     position: fixed;
     display: flex;
-    padding: 20px;
+    padding: 0;
     justify-content: flex-end;
     width: 100%;
     box-sizing: border-box;

@@ -4,7 +4,7 @@ import imgBg from '../img/chalk_logo_animation.png';
 import imgSm from '../img/chalk_logo.png';
 
 const Logo = styled.div`
-    background: url(${imgSm}) center/contain no-repeat;
+    background: url(${imgSm}) left center/contain no-repeat;
     height: 20rem;
 
     ${({ theme }) => theme.media.desktop} {
