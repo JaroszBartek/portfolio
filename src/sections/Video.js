@@ -1,10 +1,17 @@
 import React from 'react';
 import styled from 'styled-components';
 
-
+const StyledVideo = styled.video`
+    box-shadow: 10px 10px 40px rgba(0,0,0,.3);
+`
 const Video = () => {
     return (
         <>
+            <div>
+                <StyledVideo width="500" height="280" muted loop autoPlay>
+                    <source src="../../video/splash.mp4" type="video/mp4" />
+                </StyledVideo>
+            </div>
             <div>
                 <h2>Video</h2>
                 <p>
@@ -13,11 +20,6 @@ const Video = () => {
                     tworzę materiały wideo, będąc odpowiedzialnym za każdy etap, od operowania
                     kamerą po montaż i postprodukcję.
                 </p>
-            </div>
-            <div>
-                <video width="500" height="280" muted loop autoplay>
-                    <source src="video/splash.mp4" type="video/mp4" />
-                </video>
             </div>
         </>
     );
