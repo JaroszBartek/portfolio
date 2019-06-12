@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import Button from '../components/Button'
+import Button from '../components/CvBtn'
 
 const Title = styled.h3`
     margin: 0 auto;
@@ -20,7 +20,7 @@ const Cv = () => {
         <>
             <div>
                 <Title>Cv</Title>
-                <Button />
+                <Button>klik!</Button>
                 <Description>
                     Zapraszam do obejrzenia mojego CV na GitHubie!
                 </Description>

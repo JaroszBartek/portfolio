@@ -29,7 +29,6 @@ const Section = (props) => {
         <StyledSection id={props.id}>
             {props.children}
         </StyledSection>
-
     );
 }
 

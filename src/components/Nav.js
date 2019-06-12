@@ -55,7 +55,8 @@ const liTransitionDelay = () => {
 const ListItem = styled.li`
       position: relative;
       border-bottom: 2px solid ${({ theme }) => theme.colors.underscores};
-      padding: ${({ linkOpacity }) => linkOpacity ? '15px 70px 15px 10px' : '15px 70px'};
+      padding: 15px 10px;
+      transform: translateX(${({ linkOpacity }) => linkOpacity ? '0' : '50px'});
       opacity: ${({ linkOpacity }) => linkOpacity ? '1' : '0'};
       transition: all .5s ease-in-out;
       ${liTransitionDelay()}
@@ -91,7 +92,7 @@ const Nav = () => {
 
     return (
         <>
-            <Hamburger onClick={toggleMenu} navOpen={isMenuOpen}/>
+            <Hamburger onClick={toggleMenu} navOpen={isMenuOpen} />
             <Navigation navOpen={isMenuOpen}>
                 <ul >
                     {navItems.map(item => (

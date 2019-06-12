@@ -52,12 +52,12 @@ const StyledButton = styled.a`
         height: 12px;
     }
 `
-const Button = () => {
+const Button = (props) => {
     return (
         <StyledButton href='https://jaroszbartek.github.io/curriculum-vitae'
             tabindex="0"
             target="_blank">
-            <span>klik!</span>
+            <span>{props.children}</span>
         </StyledButton>
     );
 }

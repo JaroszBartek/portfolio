@@ -21,7 +21,7 @@ const cursor = keyframes`
     opacity: 0;
   }`
 
-const cursorAnimation = props => css`
+const cursorAnimation = () => css`
   ${cursor} .5s step-end infinite alternate
   `
 

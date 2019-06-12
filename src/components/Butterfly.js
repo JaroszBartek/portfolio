@@ -73,10 +73,10 @@ const RightWing = styled.div`
     `
 
 const LeftWing = styled(RightWing)`
-transform: rotateX(30deg) rotate3d(0, 1, 0, 0deg);
-left: 0px;
-top: 0px;
-animation: ${leftWingAni} .6s ease-out 4;
+    transform: rotateX(30deg) rotate3d(0, 1, 0, 0deg);
+    left: 0px;
+    top: 0px;
+    animation: ${leftWingAni} .6s ease-out 4;
 `
 
 const Butterfly = () => {
