@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import Form from '../components/Form';
-import Open from '../components/OpenBtn';
+
 
 const StyledLink = styled.a`
     display: block;
@@ -9,7 +9,8 @@ const StyledLink = styled.a`
     color: ${({ theme }) => theme.colors.text};
     text-decoration: none;
     line-height: 3;
-    `
+`
+
 const Contact = () => {
     return (
         <>
@@ -22,7 +23,6 @@ const Contact = () => {
                 </address>
             </div>
             <div>
-                <Open />
                 <Form />
             </div>
         </>

@@ -1,13 +1,22 @@
 import React from 'react';
 import LogoAnimation from '../components/LogoAnimation';
 import styled from 'styled-components';
+import img from '../img/banner_background.jpg';
 
 
-const Wrapper = styled.div`
+const StickyWrapper = styled.div`
+  height: 150vh;
+  position: relative;
+`
+
+const BannerWrapper = styled.div`
+  position: sticky;
+  top: 0;
+  background: url(${img}) no-repeat center/cover;
+  height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-  max-width: 600px;
   padding: 2rem;
   `
 const Title = styled.h1`
@@ -30,17 +39,19 @@ const Text = styled.p`
 `
 const Banner = () => {
   return (
-    <Wrapper>
-      <LogoAnimation />
-      <Title>Digital Expression</Title>
-      <Text>
-        Jestem Front-End Developerem starającym się tworzyć wyjątkowe strony
-        charakteryzujące się ekspresją oraz zapadające w pamięć. W swojej pracy
-        zawszę patrzę na projekty oczami dziecka, aby oprócz estetyki dodać do nich
-        odrobinę magii. Bardzo pomaga w tym wcześniejsze doświadczenie wyniesione z
-        produkcji filmów i animacji.
+    <StickyWrapper>
+      <BannerWrapper>
+        <LogoAnimation />
+        <Title>Digital Expression</Title>
+        <Text>
+          Jestem Front-End Developerem starającym się tworzyć wyjątkowe strony
+          charakteryzujące się ekspresją oraz zapadające w pamięć. W swojej pracy
+          zawszę patrzę na projekty oczami dziecka, aby oprócz estetyki dodać do nich
+          odrobinę magii. Bardzo pomaga w tym wcześniejsze doświadczenie wyniesione z
+          produkcji filmów i animacji.
                 </Text>
-    </Wrapper>
+      </BannerWrapper>
+    </StickyWrapper>
   );
 }
 

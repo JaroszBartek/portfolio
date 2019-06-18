@@ -1,5 +1,5 @@
 import React from 'react';
-import styled, { css, keyframes } from 'styled-components';
+import styled, { keyframes } from 'styled-components';
 
 const beatBtn = keyframes`
 0% {
@@ -13,8 +13,8 @@ const beatBtn = keyframes`
   `
 
 const StyledOpen = styled.button`
-    position:relative;
-    z-index: -1;
+    position: absolute;
+    z-index: 0;
     display: flex;
     border: none;
     justify-content: center;
@@ -22,8 +22,10 @@ const StyledOpen = styled.button`
     width: 120px;
     height: 120px;
     border-radius: 50%;
-    margin-top: 50px;
-    margin-bottom: 50px;
+    margin: 50px 0;
+    opacity: ${({ formOpen }) => formOpen ? '0' : '1'};
+    visibility: ${({ formOpen }) => formOpen ? 'hidden' : 'visible'};
+    transition: all .3s
     &::before {
         content: "";
         display: block;
@@ -36,14 +38,14 @@ const StyledOpen = styled.button`
         top: 0;
         left: 0;
         box-shadow: 0 10px 30px 0px ${({ theme }) => theme.colors.secondary};
-        transition: all 0.4s;
+        transition: all .4s;
         animation: ${beatBtn} 1s ease-in-out infinite;
     }
 `
 
-const Open = () => {
+const Open = (props) => {
     return (
-        <StyledOpen>
+        <StyledOpen onClick={props.toggleForm} formOpen={props.formOpen}>
             <svg
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 382.117 382.117"

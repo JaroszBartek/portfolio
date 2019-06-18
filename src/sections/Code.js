@@ -1,5 +1,6 @@
 import React from 'react';
 import styled, { css, keyframes } from 'styled-components';
+import IntersectBox from '../components/IntersectBox';
 
 const type = keyframes`
 0% {
@@ -29,16 +30,12 @@ const animation = props => css`
   ${type} ${props => (props.length * 0.1).toFixed(1)}s steps(${props.length}, end);
   `
 
-const txt = ["<!doctype html>", "<html>", "<head> ", `<meta charset="utf-8">`, `<meta name="viewport"> `, `<meta name="description">`, "</head> ", "<body>  "]
+const txt = ["", "<!doctype html>", "<html>", "<head> ", `<meta charset="utf-8">`, `<meta name="viewport"> `, `<meta name="description">`, "</head> ", "<body> "]
 
-const Animation = styled.div`
-display: flex;
-flex-direction: column;
-align-items: flex-start;
-`
+
 const Paragraph = styled.p`
   color: #000000;
-  display: inline-block;
+  display: block;
   width: ${({ length }) => (length * 1.33).toFixed(2)}rem;
   font-size: 1.9rem;
   font-weight: bold;
@@ -48,11 +45,9 @@ const Paragraph = styled.p`
   white-space: nowrap;
   letter-spacing: 2px;
   line-height: 2;
-  animation: ${animation};
   opacity: 0;
-  animation-fill-mode: forwards;
-  animation-delay: ${({ index }) => (index * 2.5)}s;
   :last-of-type {
+    width: 9.5rem;
     position: relative;
     ::after {
       content: "";
@@ -64,11 +59,22 @@ const Paragraph = styled.p`
       animation: ${cursorAnimation};
     } 
   }
+  .is-active & {
+    animation: ${animation};
+    animation-fill-mode: forwards;
+    animation-delay: ${({ letters }) => (letters * 0.1).toFixed(2)}s;
+  }
 `
 
-const typing = txt.map((paragraph, i) => (
-  <Paragraph length={paragraph.length} index={i} key={i}>{paragraph}</Paragraph>
-));
+let letters = 0;
+const typing = txt.map((paragraph, i) => {
+  let index = i > 0 ? (i - 1) : 0;
+  return (
+    <Paragraph letters={letters += txt[index].length} length={paragraph.length} key={i}>
+      {paragraph}
+    </Paragraph>
+  );
+});
 
 const Code = () => {
   return (
@@ -83,9 +89,9 @@ const Code = () => {
                 </p>
       </div>
       <div>
-        <Animation>
+        <IntersectBox initial="addClass">
           {typing}
-        </Animation>
+        </IntersectBox>
       </div>
 
     </>

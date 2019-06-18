@@ -13,7 +13,12 @@ const Button = styled.button`
     outline: none;
 	border: none;
     background: none;
-    cursor: pointer;
+    transform: translate(0, 0) scale(1);
+    transform-origin: center;
+    transition: transform .2s;
+    &:hover {
+        transform: translate(-5px, 5px) scale(1.04);
+    }
     `;
 
 const DivHamburger = styled.div`

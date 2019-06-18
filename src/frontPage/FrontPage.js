@@ -27,6 +27,9 @@ body {
   letter-spacing: 1px;
   line-height: 1.5;
 }
+button {
+  cursor: pointer;
+}
 `;
 
 const FrontPage = () => {

@@ -4,12 +4,12 @@ import styled, { css } from 'styled-components';
 import Hamburger from './Hamburger'
 
 const navItems = [
-    { id: 1, name: "Start", path: "/#home" },
-    { id: 2, name: "Projektowanie", path: "/#design" },
-    { id: 3, name: "Kod", path: "/#code" },
-    { id: 4, name: "Animacje", path: "/#animation" },
-    { id: 5, name: "Video", path: "/#video" },
-    { id: 6, name: "Kontakt", path: "/#contact" },
+    { name: "Start", path: "/#home" },
+    { name: "Projektowanie", path: "/#design" },
+    { name: "Kod", path: "/#code" },
+    { name: "Animacje", path: "/#animation" },
+    { name: "Video", path: "/#video" },
+    { name: "Kontakt", path: "/#contact" },
 ]
 
 const Navigation = styled.nav`
@@ -96,7 +96,7 @@ const Nav = () => {
             <Navigation navOpen={isMenuOpen}>
                 <ul >
                     {navItems.map(item => (
-                        <ListItem key={item.id}
+                        <ListItem key={item.path}
                             linkOpacity={isMenuOpen}>
                             <StyledLink smooth to={item.path}>
                                 {item.name}

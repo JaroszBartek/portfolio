@@ -8,15 +8,10 @@ import Animation from '../sections/Animation';
 import Video from '../sections/Video';
 import Cv from '../sections/Cv';
 import Contact from '../sections/Contact';
-import img from '../img/banner_background.jpg';
 
 const StyledMain = styled.main`
     display: grid;
     grid-gap: 2rem;
-    &>section:first-child {
-        background: url(${img}) no-repeat center/cover;
-        height: 100vh;
-    }
 `;
 
 const sectionsList = [

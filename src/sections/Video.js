@@ -3,12 +3,15 @@ import styled from 'styled-components';
 
 const StyledVideo = styled.video`
     box-shadow: 10px 10px 40px rgba(0,0,0,.3);
+    width: 100%;
+    height: auto;
+    max-width: 500px 
 `
 const Video = () => {
     return (
         <>
             <div>
-                <StyledVideo width="500" height="280" muted loop autoPlay>
+                <StyledVideo muted loop autoPlay>
                     <source src="../../video/splash.mp4" type="video/mp4" />
                 </StyledVideo>
             </div>

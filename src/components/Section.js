@@ -5,7 +5,6 @@ const StyledSection = styled.section`
 display: grid;
 grid-gap: 2rem;
 grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-padding: 2rem;
 
  h2 {
     color: ${({ theme }) => theme.colors.title};

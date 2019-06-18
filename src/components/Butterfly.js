@@ -1,7 +1,8 @@
 import React from 'react';
-import styled, { css, keyframes } from 'styled-components';
+import styled, { keyframes } from 'styled-components';
 import tentacles from '../img/butterfly-tentacles.png';
 import wings from '../img/butterfly-animation.png';
+import IntersectBox from './IntersectBox';
 
 const tentaclesRotation = keyframes`
 from {
@@ -57,7 +58,9 @@ const Tentacles = styled.div`
     left: 49%;
     top: 5.1%;
     background-size: cover;
-    animation: ${tentaclesRotation} .6s ease-out 4;
+    .is-active & {
+        animation: ${tentaclesRotation} .6s ease-out 4;
+    }
   `
 const RightWing = styled.div`
     transform: rotateX(30deg)  translate3d(-200px, 0px, 0px) rotate3d(0, 1, 0, 160deg);
@@ -69,23 +72,30 @@ const RightWing = styled.div`
     height: 100%;
     background: url(${wings}) no-repeat;
     background-size: cover;
-    animation: ${rightWingAni} .6s ease-out 4;
+    .is-active & {
+        animation: ${rightWingAni} .6s ease-out 4;
+    }
+    
     `
 
 const LeftWing = styled(RightWing)`
     transform: rotateX(30deg) rotate3d(0, 1, 0, 0deg);
     left: 0px;
     top: 0px;
-    animation: ${leftWingAni} .6s ease-out 4;
+    .is-active & {
+        animation: ${leftWingAni} .6s ease-out 4;
+    }
 `
 
 const Butterfly = () => {
     return (
-        <StyledWrapper>
-            <Tentacles />
-            <LeftWing />
-            <RightWing />
-        </StyledWrapper>
+        <IntersectBox initial="addClass">
+            <StyledWrapper >
+                <Tentacles />
+                <LeftWing />
+                <RightWing />
+            </StyledWrapper>
+        </IntersectBox>
     );
 }
 
