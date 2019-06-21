@@ -1,7 +1,7 @@
 import React from 'react';
 import styled, { keyframes } from 'styled-components';
-import tentacles from '../img/butterfly-tentacles.png';
-import wings from '../img/butterfly-animation.png';
+import tentacles from '../assets/img/butterfly-tentacles.png';
+import wings from '../assets/img/butterfly-animation.png';
 import IntersectBox from './IntersectBox';
 
 const tentaclesRotation = keyframes`

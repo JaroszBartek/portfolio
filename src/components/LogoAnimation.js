@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
-import imgBg from '../img/chalk_logo_animation.png';
-import imgSm from '../img/chalk_logo.png';
+import imgBg from '../assets/img/chalk_logo_animation.png';
+import imgSm from '../assets/img/chalk_logo.png';
 import IntersectBox from '../components/IntersectBox';
 
 const Logo = styled.div`

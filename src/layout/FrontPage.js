@@ -1,9 +1,9 @@
 import React from 'react';
 import { BrowserRouter as Router } from 'react-router-dom';
 import { createGlobalStyle, ThemeProvider } from 'styled-components';
-import { theme } from '../theme/theme'
+import { theme } from '../helpers/theme'
 import Header from '../components/Header';
-import Main from '../components/Main';
+import Main from './Main';
 import Footer from '../components/Footer';
 
 

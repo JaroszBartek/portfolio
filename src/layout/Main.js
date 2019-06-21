@@ -1,13 +1,13 @@
 import React from 'react';
 import styled from 'styled-components';
-import Banner from '../sections/Banner';
-import Design from '../sections/Design';
-import Code from '../sections/Code';
-import Animation from '../sections/Animation';
-import Video from '../sections/Video';
-import Cv from '../sections/Cv';
-import Contact from '../sections/Contact';
-import Article from './Article';
+import Banner from '../layout/Banner';
+import Design from '../layout/Design';
+import Code from '../layout/Code';
+import Animation from '../layout/Animation';
+import Video from '../layout/Video';
+import Cv from '../layout/Cv';
+import Contact from '../layout/Contact';
+import Article from '../layout/Article';
 
 const StyledMain = styled.main`
     display: grid;

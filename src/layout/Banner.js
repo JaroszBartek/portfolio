@@ -1,7 +1,7 @@
 import React from 'react';
 import LogoAnimation from '../components/LogoAnimation';
 import styled from 'styled-components';
-import img from '../img/banner_background.jpg';
+import img from '../assets/img/banner_background.jpg';
 
 
 const StickyWrapper = styled.div`
