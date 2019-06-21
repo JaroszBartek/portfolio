@@ -1,5 +1,5 @@
 import React from 'react';
-import useIntersect from './IntersectionObserver';
+import useIntersect from '../helpers/IntersectionObserver';
 import styled from 'styled-components';
 
 
