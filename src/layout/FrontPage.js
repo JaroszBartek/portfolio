@@ -36,7 +36,7 @@ const FrontPage = () => {
 
   return (
     <ThemeProvider theme={theme} >
-      <Router basename={ProcessingInstruction.env.PUBLIC_URL}>
+      <Router basename={process.env.PUBLIC_URL}>
         <GlobalStyle />
         <>
           <Header />
