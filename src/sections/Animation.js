@@ -1,11 +1,15 @@
 import React from 'react';
 import Butterfly from '../components/Butterfly';
+import styled from 'styled-components';
 
-
+const StyledWrapper = styled.div`
+    max-width: 700px;
+    margin-top: 50px;
+`
 const Animation = () => {
     return (
         <>
-            <div>
+            <StyledWrapper>
                 <Butterfly />
                 <h2>Animacje</h2>
                 <p>
@@ -15,7 +19,7 @@ const Animation = () => {
                     chodź potrafię wykonać bardziej złożone rzeczy w plikach wideo przy pomocy
                     Adobe After Effects.
                 </p>
-            </div>
+            </StyledWrapper>
         </>
     );
 }

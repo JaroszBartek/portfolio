@@ -4,9 +4,9 @@ import styled from 'styled-components';
 const StyledWrapper = styled.div`
     width: 100%;
     position: relative;
-    margin-bottom: 65px;
+    margin-bottom: 40px;
     border-bottom: 2px solid ${({ theme }) => theme.colors.underscores};
-    padding-bottom: 1.3rem;
+    padding-bottom: 1.1rem;
 `
 const StyledInput = styled.input`
     display: block;

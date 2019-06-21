@@ -5,19 +5,26 @@ import img from '../img/banner_background.jpg';
 
 
 const StickyWrapper = styled.div`
-  height: 150vh;
   position: relative;
+  width: 100%;
+  ${({ theme }) => theme.media.desktop} {
+  height: 150vh;
+}
 `
 
 const BannerWrapper = styled.div`
-  position: sticky;
+  position: relative;
+  width: 100%;
   top: 0;
   background: url(${img}) no-repeat center/cover;
-  height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
   padding: 2rem;
+  ${({ theme }) => theme.media.desktop} {
+    position: sticky;
+    height: 100vh;
+  }
   `
 const Title = styled.h1`
   margin-top: 0;
@@ -37,19 +44,24 @@ const Text = styled.p`
     font-size: 1.8rem;
   }
 `
+const BannerContent = styled.div`
+  max-width: 800px;
+  padding: 0.5rem;`
 const Banner = () => {
   return (
     <StickyWrapper>
       <BannerWrapper>
         <LogoAnimation />
-        <Title>Digital Expression</Title>
-        <Text>
-          Jestem Front-End Developerem starającym się tworzyć wyjątkowe strony
-          charakteryzujące się ekspresją oraz zapadające w pamięć. W swojej pracy
-          zawszę patrzę na projekty oczami dziecka, aby oprócz estetyki dodać do nich
-          odrobinę magii. Bardzo pomaga w tym wcześniejsze doświadczenie wyniesione z
-          produkcji filmów i animacji.
-                </Text>
+        <BannerContent>
+          <Title>Digital Expression</Title>
+          <Text>
+            Jestem Front-End Developerem starającym się tworzyć wyjątkowe strony
+            charakteryzujące się ekspresją oraz zapadające w pamięć. W swojej pracy
+            zawszę patrzę na projekty oczami dziecka, aby oprócz estetyki dodać do nich
+            odrobinę magii. Bardzo pomaga w tym wcześniejsze doświadczenie wyniesione z
+            produkcji filmów i animacji.
+        </Text>
+        </BannerContent>
       </BannerWrapper>
     </StickyWrapper>
   );

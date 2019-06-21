@@ -41,10 +41,14 @@ const StyledWrapper = styled.div`
     position: relative;
     transform: rotateZ(-20deg) rotate3d(0, 1, 0, 10deg) scale3d(1, 1, 1);
     transform-origin: 51% 50%;
-    width: 300px;
-    height: 175.5px;
+    width: 280px;
+    height: 163.8px;
     transform-style: preserve-3d;
     margin:auto;
+    ${({ theme }) => theme.media.tablet} {
+        width: 500px;
+        height: 297.5px;
+    }
     ${({ theme }) => theme.media.desktop} {
         width: 600px;
         height: 357px;

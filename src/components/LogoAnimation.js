@@ -5,8 +5,9 @@ import imgSm from '../img/chalk_logo.png';
 import IntersectBox from '../components/IntersectBox';
 
 const Logo = styled.div`
-    background: url(${imgSm}) left center/contain no-repeat;
+    background: url(${imgSm}) left bottom/contain no-repeat;
     height: 20rem;
+    width: 100%;
 
     ${({ theme }) => theme.media.desktop} {
         background: url(${imgBg});

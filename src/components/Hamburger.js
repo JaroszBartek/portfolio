@@ -13,6 +13,7 @@ const Button = styled.button`
     outline: none;
 	border: none;
     background: none;
+    pointer-events: auto;
     transform: translate(0, 0) scale(1);
     transform-origin: center;
     transition: transform .2s;

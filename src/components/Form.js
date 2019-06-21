@@ -6,15 +6,17 @@ import Open from './OpenBtn';
 
 
 const StyledWrapper = styled.div`
-    width: 90%;
+    width: 96%;
     position: relative;
     border-radius: 10px;
-    padding: 50px 15px 30px;
+    padding: 30px 15px 30px;
     border: 1px solid #ececec;
     background: ${({ theme }) => theme.colors.primary};
     box-shadow: -1px 9px 19px -8px rgba(0, 0, 0, .49);
     opacity: ${({ formOpen }) => formOpen ? '1' : '0'};
     visibility: ${({ formOpen }) => formOpen ? 'visible' : 'hidden'};
+    transform: scaleY(${({ formOpen }) => formOpen ? '1' : '0.1'});
+    transform-origin: center;
     transition: all .2s
 `
 const CloseBtn = styled.button`
@@ -70,7 +72,7 @@ const Title = styled.span`
     color: #333333;
     line-height: 1.2;
     text-align: left;
-    padding-bottom: 44px;
+    padding-bottom: 30px;
 `
 
 class Form extends Component {

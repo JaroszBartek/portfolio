@@ -14,6 +14,9 @@ const beatBtn = keyframes`
 
 const StyledOpen = styled.button`
     position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     z-index: 0;
     display: flex;
     border: none;
@@ -22,7 +25,6 @@ const StyledOpen = styled.button`
     width: 120px;
     height: 120px;
     border-radius: 50%;
-    margin: 50px 0;
     opacity: ${({ formOpen }) => formOpen ? '0' : '1'};
     visibility: ${({ formOpen }) => formOpen ? 'hidden' : 'visible'};
     transition: all .3s

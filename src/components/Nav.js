@@ -19,6 +19,7 @@ const Navigation = styled.nav`
     padding-top: 100px;
     width: 100vw;
     height: 100vh;
+    pointer-events: auto;
     transform: ${({ navOpen }) => navOpen ? 'translateX(0)' : 'translateX(100vw)'};
     background-color: ${({ theme }) => theme.colors.primary};
     box-shadow: -1px 9px 19px -8px rgba(0, 0, 0, .49);

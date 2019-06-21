@@ -10,6 +10,7 @@ const StyledHeader = styled.header`
     width: 100%;
     box-sizing: border-box;
     z-index: 500;
+    pointer-events: none;
     `;
 
 const Header = () => {

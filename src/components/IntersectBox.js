@@ -5,7 +5,6 @@ import styled from 'styled-components';
 
 
 const StyledWrapper = styled.div`
-    height: 80vh;
     width: 100%;
     position: relative;
     display: flex;
@@ -14,7 +13,7 @@ const StyledWrapper = styled.div`
 
     ${({ theme }) => theme.media.desktop} {
         .logo {
-            background-position: ${({ ratio }) => `center -${ratio < 57 ? (ratio * 481) : (56 * 481)}px`};
+            background-position: ${({ ratio }) => `center -${ratio <= 56 ? (ratio * 481) : (56 * 481)}px`};
     }
 `
 let active = null;
