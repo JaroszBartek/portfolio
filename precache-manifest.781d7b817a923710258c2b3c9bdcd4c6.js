@@ -1,15 +1,15 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "1645a84a0751cf926cb7958bf54dcbc3",
+    "revision": "4568c9f204e9e7314a311ce450b3ec89",
     "url": "/portfolio/index.html"
   },
   {
-    "revision": "03a0db66dae436b365ee",
-    "url": "/portfolio/static/js/2.793be867.chunk.js"
+    "revision": "4fafbe083bf12d9eb32a",
+    "url": "/portfolio/static/js/2.670698bc.chunk.js"
   },
   {
-    "revision": "086eb80dc463f4b0caf0",
-    "url": "/portfolio/static/js/main.f290e1ee.chunk.js"
+    "revision": "b8caef085ffaa05063fe",
+    "url": "/portfolio/static/js/main.803d0dec.chunk.js"
   },
   {
     "revision": "53ebc025fca807d4dbea",
@@ -30,5 +30,9 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "76fd08f577b2f02d8f2921ef2749ef56",
     "url": "/portfolio/static/media/chalk_logo_animation.76fd08f5.png"
+  },
+  {
+    "revision": "cf3463e98a4d7806a5b84795c1836336",
+    "url": "/portfolio/static/media/splash.cf3463e9.mp4"
   }
 ]);
